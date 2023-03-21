@@ -16,6 +16,91 @@
 
 
 //指令集
-{ "commands":[ { "name":"look", "alias":[ "l" ], "description":"查看当前位置的描述、明显的出口和直观可见的资源列表。" }, { "name":"search", "alias":[ "s" ], "description":"搜索当前位置，寻找隐藏的资源。搜索成功的概率取决于当前位置的环境和你的运气。搜索成功后，你将获得一些额外的资源，并且当前位置的资源列表中也会更新。请注意，搜索可能会消耗一些体力和时间。" }, { "name":"go", "alias":[ "g" ], "description":"前往指定方向（例如“go east”前往东边）。" }, { "name":"gather", "alias":[ "ga" ], "description":"采集指定资源（例如“gather coral”采集珊瑚），当玩家成功采集到资源时，应该得到具体的物品，并存放到背包中。" }, { "name":"inventory", "alias":[ "i" ], "description":"查看背包里的物品。" }, { "name":"use", "alias":[ "u" ], "description":"使用指定物品（例如“use coconut”使用椰子）。" }, { "name":"drop", "alias":[ "d" ], "description":"丢弃指定物品（例如“drop coral”丢弃珊瑚）。" }, { "name":"map", "alias":[ "m" ], "description":"查看当前位置的地图。" }, { "name":"help", "alias":[ "h" ], "description":"查看帮助信息。" }, { "name":"solve", "alias":[ "sv" ], "description":"尝试解决当前区域的谜题或难题。在解谜过程中，你可以尝试各种动作和行为，寻找线索和提示。如果你成功解决谜题，你将获得一些额外的奖励。" }, { "name":"dev", "description":"开发者模式，临时跳出MUD游戏的模拟，用于与ChatGPT沟通，以完善此MUD游戏的开发。" } ] }
+{
+  "commands": [
+    {
+      "name": "look",
+      "alias": [
+        "l"
+      ],
+      "description": "查看当前位置的描述、明显的出口和直观可见的资源列表。",
+      "system_description": ""
+    },
+    {
+      "name": "search",
+      "alias": [
+        "s"
+      ],
+      "description": "搜索当前位置，寻找隐藏的资源。搜索成功的概率取决于当前位置的环境和你的运气。请注意，搜索可能会消耗一些体力和时间。",
+      "system_description": "当玩家成功获得资源时，应将得到的物品存放到背包中。"
+    },
+    {
+      "name": "go",
+      "alias": [
+        "g"
+      ],
+      "description": "前往指定方向（例如“go east”前往东边）。",
+      "system_description": "瞬移技能有效时且目的地已访问过时，可以直达目的地。条件不满足时则不允许。"
+    },
+    {
+      "name": "gather",
+      "alias": [
+        "ga"
+      ],
+      "description": "采集指定资源（例如“gather coral”采集珊瑚）。",
+      "system_description": "当玩家成功采集到资源时，应将得到的物品存放到背包中。"
+    },
+    {
+      "name": "inventory",
+      "alias": [
+        "i"
+      ],
+      "description": "查看背包里的物品。",
+      "system_description": ""
+    },
+    {
+      "name": "use",
+      "alias": [
+        "u"
+      ],
+      "description": "使用指定物品（例如“use coconut”使用椰子）。",
+      "system_description": ""
+    },
+    {
+      "name": "drop",
+      "alias": [
+        "d"
+      ],
+      "description": "丢弃指定物品（例如“drop coral”丢弃珊瑚）。",
+      "system_description": ""
+    },
+    {
+      "name": "map",
+      "alias": [
+        "m"
+      ],
+      "description": "查看当前位置的地图。",
+      "system_description": ""
+    },
+    {
+      "name": "try",
+      "description": "尝试与环境互动，有小概率获得物品或解锁新技能的机会，成功的概率取决于当前位置的环境和你的运气。请注意，互动可能会消耗一些体力和时间。",
+      "system_description": "1、如果成功获得物品，应将物品存放到背包中；2、如果成功解锁技能，也应设置对应技能选项。"
+    },
+    {
+      "name": "help",
+      "alias": [
+        "h"
+      ],
+      "description": "查看帮助信息。",
+      "system_description": "1、指令的系统描述信息（system_description）仅供系统参考，不需要向玩家展示；2、help后跟具体指令时，仅显示该指令的描述信息即可，而不用显示所有指令的。"
+    },
+    {
+      "name": "dev",
+      "description": "开发者模式，临时跳出MUD游戏的模拟，用于与ChatGPT沟通，以完善此MUD游戏的开发。",
+      "system_description": ""
+    }
+  ]
+}
 3、欢迎玩家的到来，提示玩家使用help查看帮助信息。
 
