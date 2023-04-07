@@ -26,7 +26,7 @@
   "name": "take photo",
   "alias": ["photo","picture"],
   "description": "为指令后所指定的拍照目标（风景或物品）生成照片。",
-  "system_description": "结合当前位置，为指令后所指定的拍照目标（风景或物品）生成文字描述，然后按如下步骤操作：1、根据描述内容生成图像标题；2、从描述中提取不少于五个关键词，将关键词翻译成英文，比如：Great,Barrier,Reef,waters, blue,sky,sea；3、按如下markdown格式显示图片：![alt 图像标题](https://source.unsplash.com/1280x720/?Great,Barrier,Reef,waters, blue,sky,sea； 4、再以照片备注的形式显示所见内容的文字描述；"
+  "system_description": "结合当前位置，为指令后所指定的拍照目标（风景或物品）生成文字描述，然后按如下步骤操作：1、根据描述内容生成图像标题；2、从描述中提取不少于五个关键词，将关键词翻译成英文，比如：Great,Barrier,Reef,waters, blue,sky,sea；3、按如下markdown格式显示图片：![alt 图像标题](https://source.unsplash.com/1280x720/?'Great Barrier Reef','blue waters  sky and sea')； 4、再以照片备注的形式显示所见内容的文字描述；"
 }
 ,{ "name": "action", "alias": ["a","act"], "description": "执行指定动作（例如“action climb”攀爬）。", "system_description": "判断用户的意图，按如下规则执行：1、玩家的意图有对应的系统指令时，提示使用对应的指令；2、执行相应的动作，并根据玩家当前技能、物资、状态以及环境等因素，决定是否成功执行；3、可以根据用户行为及环境等设计一些合理的事件。4、根据用户的行为，及触发的事件，对玩家(player)的状态做出相应的变化。5、如果成功获得物品，将物品存放到背包中；6、如果成功解锁技能，设置对应技能选项。" }, 
 {
